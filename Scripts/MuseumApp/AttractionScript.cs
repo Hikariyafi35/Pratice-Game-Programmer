@@ -17,5 +17,7 @@ namespace MuseumApp
 
         public Vector2 headerSize; //menampung ukuran header
         public Vector3 headerPosition; //menampung posisi header
+
+        public int starIndex;
     }
 }

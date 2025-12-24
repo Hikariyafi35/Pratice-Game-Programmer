@@ -16,13 +16,14 @@ namespace MuseumApp
         public TMP_Text attractionLocation;
 
         public List<Image> stars;
-        private Color activeColor;
-        private Color inactiveColor;
+        public Color activeColor;
+        public Color inactiveColor;
 
         private AttractionScreenParameters parameters;
+        private AttractionScript attractionConfig;
         private void Start() {
             parameters = GameObject.FindObjectOfType<AttractionScreenParameters>();
-            var attractionConfig = parameters.config;
+            attractionConfig = parameters.config;
 
             attractionTitle.text = attractionConfig.Tittle;
             attractionAuthor.text = attractionConfig.Author;
@@ -34,10 +35,28 @@ namespace MuseumApp
             rectTransform.anchoredPosition3D = attractionConfig.headerPosition;
             rectTransform.sizeDelta = attractionConfig.headerSize;
 
+            //star rating
+            var starIndex = PlayerPrefs.GetInt(attractionConfig.ID);
+            setupStar(starIndex);
+
         }
         public void OnClickedBack()
         {
             SceneManager.LoadScene("HomeScreen", LoadSceneMode.Single);
+        }
+        public void OnClickStar(int starIndex)
+        {
+            PlayerPrefs.SetInt(attractionConfig.ID, starIndex);
+            //setup star
+            setupStar(starIndex);
+        }
+
+        private void setupStar(int starIndex)
+        {
+            for(int i=0; i<stars.Count;i++)
+            {
+                stars[i].color = i<starIndex ? activeColor : inactiveColor;
+            }
         }
     }
 }

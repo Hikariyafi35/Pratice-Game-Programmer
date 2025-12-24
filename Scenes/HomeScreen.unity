@@ -1104,6 +1104,8 @@ MonoBehaviour:
   attractionEntryRectTransform: {fileID: 1095499043}
   config: {fileID: 11400000, guid: 94017140a47fac64c99167ed9705fc96, type: 2}
   configFiles: []
+  loginButton: {fileID: 0}
+  userName: {fileID: 0}
 --- !u!114 &1293178102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1122,8 @@ MonoBehaviour:
   attractionEntryRectTransform: {fileID: 1095499043}
   config: {fileID: 11400000, guid: 89af9155d3084414c8a0c7f62d3c024c, type: 2}
   configFiles: []
+  loginButton: {fileID: 0}
+  userName: {fileID: 0}
 --- !u!114 &1293178103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,6 +1143,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94017140a47fac64c99167ed9705fc96, type: 2}
   - {fileID: 11400000, guid: 89af9155d3084414c8a0c7f62d3c024c, type: 2}
   - {fileID: 11400000, guid: 60b90fc154ebea24b98edb3c12c65fce, type: 2}
+  loginButton: {fileID: 800537076}
+  userName: {fileID: 1465556838}
 --- !u!1 &1465556837
 GameObject:
   m_ObjectHideFlags: 0
